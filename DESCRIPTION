@@ -1,0 +1,11 @@
+Package: teamsutils
+Title: Utilities for MS Teams.
+Description: Utilities for MS Teams, inspired by (but simpler than)
+   <https://github.com/wwwjk366/teamr>.
+Version: 0.0-1
+Date: 2021-02-04
+Author: Enrico Schumann
+Maintainer: Enrico Schumann <es@enricoschumann.net>
+License: GPL-3
+Type: Package
+Imports: httr
