@@ -3,7 +3,8 @@ send_message_card <- function(wh, msg, ...) {
                       httr::add_headers("Content-Type"="application/json"),
                       body = msg,
                       timeout = 3,
-                      encode = 'json'
+                      encode = 'json',
+                      ...
                       )
 
     if(res$status_code == 200)

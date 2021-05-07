@@ -1,25 +1,33 @@
-\name{send_message_card}
+\name{teamsutils}
+\alias{teamsutils}
+\alias{teamsutils-package}
+\alias{message_card}
 \alias{send_message_card}
 \title{
   Send Message Card
 }
 \description{
   Send Message Card to Teams Channel
-  
+
 }
 \usage{
+message_card(text, title, ...)
 send_message_card(wh, msg, ...)
 }
 \arguments{
   \item{wh}{
-    webhook
-}
+    webhook: an \acronym{URL}
+  }
+  
   \item{msg}{
     message (a string)
 }
-  \item{\dots}{
-    
+  \item{text,title}{
+    strings
 }
+  \item{\dots}{
+
+  }
 }
 \details{
   Experimental.
@@ -37,5 +45,11 @@ send_message_card(wh, msg, ...)
 %% %% ~~objects to See Also as \code{\link{help}}, ~~~
 %% }
 \examples{
-### to be added
+\donttest{
+    msg <- message_card(text  = textutils::HTMLencode("This is the text."),
+                        title = textutils::HTMLencode("A heading"))
+
+    wh <- "http://testing.webhook.office.com/728afea0-0026-4eee-bf2d-77aa1406d578"
+    send_message_card(wh = wh, msg = msg)
+}
 }
