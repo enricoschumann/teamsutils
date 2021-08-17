@@ -7,7 +7,7 @@ send_message_card <- function(wh, msg, ...) {
                       ...
                       )
 
-    if(res$status_code == 200)
+    if (res$status_code == 200)
         TRUE
     else
         res
